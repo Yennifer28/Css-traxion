@@ -1,0 +1,74 @@
+/* Paleta de colores azules */
+:root {
+    --azul-claro: #e0f2ff;
+    --azul-medio: #4a90e2;
+    --azul-oscuro: #002d6f;
+    --texto-principal: #03396c;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--azul-claro);
+    color: var(--texto-principal);
+}
+
+header {
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--blanco);
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: var(--azul-oscuro);
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Efecto al pasar el ratón sobre secciones */
+section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
