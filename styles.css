@@ -8,102 +8,121 @@
 }
 
 /* Estilos globales con herencia */
-body{
-    font-family: Arial, sans-serif; /* heredable */
-    color: var(--texto-principal);   /* heredable */
-    line-height: 1.6;                /* heredable */
-    margin:0;
-    padding:0;
+body {
+    font-family: Arial, sans-serif; 
+    color: var(--texto-principal);  
+    line-height: 1.6;               
+    margin: 0;
+    padding: 0;
     background: linear-gradient(to bottom, var(--azul-claro), white);
 }
 
 /* Header */
-header{
+header {
     background-color: var(--azul-medio);
     color: var(--blanco);
     text-align: center;
     padding: 40px 20px;
 }
 
-header h1{
+header h1 {
     font-size: 2.5rem;
-    margin:0;
+    margin: 0;
 }
 
-header p{
+header p {
     font-size: 1.2rem;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 /* Navegación */
-nav{
-    margin-top:15px;
+nav {
+    margin-top: 15px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-nav a:hover{
-    text-decoration:underline;
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Contenedor principal */
-main{
-    max-width:900px;
-    margin:40px auto;
-    padding:0 20px;
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 /* Secciones estilo tarjeta */
-section{
+section {
     background-color: var(--blanco);
-    padding:25px;
-    margin-bottom:25px;
-
-    border-radius:12px;
-    border-left:6px solid var(--azul-medio);
-
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border-left: 6px solid var(--azul-medio);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
 
-section:hover{
-    transform:translateY(-6px);
+section:hover {
+    transform: translateY(-6px);
 }
 
-section h2{
+section h2 {
     color: var(--azul-oscuro);
 }
 
 /* Listas */
-ul{
-    padding-left:20px;
+ul {
+    padding-left: 20px;
 }
 
-ul li{
-    margin-bottom:10px;
+ul li {
+    margin-bottom: 10px;
 }
 
 /* Imagen dentro de la sección de ansiedad */
 .imagen-herencia {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px; /* Limita tamaño */
+    height: auto;
     display: block;
     margin: 15px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: cover; /* Ajusta recorte si es necesario */
+}
+
+/* Flexbox */
+.contenedor-flex {
+    display: flex;                 
+    justify-content: space-around; 
+    align-items: center;           
+    flex-wrap: wrap;               
+    margin-top: 15px;
+    gap: 15px;                     
+}
+
+.contenedor-flex .caja {
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 150px;               
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Footer */
-footer{
+footer {
     background-color: var(--azul-oscuro);
     color: var(--blanco);
-    text-align:center;
-    padding:25px;
-    margin-top:40px;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
 }
