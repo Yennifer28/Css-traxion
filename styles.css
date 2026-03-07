@@ -89,18 +89,18 @@ ul li {
 /* Imagen dentro de la sección de ansiedad */
 .imagen-herencia {
     width: 100%;
-    max-width: 500px; /* Limita tamaño */
+    max-width: 500px; 
     height: auto;
     display: block;
     margin: 15px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    object-fit: cover; /* Ajusta recorte si es necesario */
+    object-fit: cover;
 }
 
-/* Flexbox */
+/* Flexbox: síntomas de ansiedad */
 .contenedor-flex {
-    display: flex;                 
+    display: flex;                  
     justify-content: space-around; 
     align-items: center;           
     flex-wrap: wrap;               
@@ -116,6 +116,12 @@ ul li {
     flex: 1 1 150px;               
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Caja destacada */
+.contenedor-flex .destacado {
+    flex-grow: 2;                  
+    background-color: var(--azul-oscuro);
 }
 
 /* Footer */
