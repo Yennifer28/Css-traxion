@@ -5,17 +5,16 @@
     --azul-oscuro: #002d6f;
     --texto-principal: #03396c;
     --blanco: #ffffff;
-    --gris-claro: #f5f5f5;
 }
 
 /* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
-    color: var(--texto-principal);
-    line-height: 1.6;
+    font-family: Arial, sans-serif; 
+    color: var(--texto-principal);  
+    line-height: 1.6;               
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, var(--azul-claro), var(--gris-claro));
+    background: linear-gradient(to bottom, var(--azul-claro), white);
 }
 
 /* Header */
@@ -24,10 +23,6 @@ header {
     color: var(--blanco);
     text-align: center;
     padding: 40px 20px;
-    position: sticky; /* Mantener visible al hacer scroll */
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 header h1 {
@@ -50,13 +45,10 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    transition: background-color 0.3s, padding 0.3s;
 }
 
 nav a:hover {
-    background-color: rgba(255,255,255,0.2);
-    padding: 5px 10px;
-    border-radius: 5px;
+    text-decoration: underline;
 }
 
 /* Contenedor principal */
@@ -74,7 +66,7 @@ section {
     border-radius: 12px;
     border-left: 6px solid var(--azul-medio);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 section:hover {
@@ -94,10 +86,10 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Imagen */
+/* Imagen dentro de la sección de ansiedad */
 .imagen-herencia {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; 
     height: auto;
     display: block;
     margin: 15px auto;
@@ -108,12 +100,12 @@ ul li {
 
 /* Flexbox: síntomas de ansiedad */
 .contenedor-flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: flex;                  
+    justify-content: space-around; 
+    align-items: center;           
+    flex-wrap: wrap;               
     margin-top: 15px;
+    gap: 15px;                     
 }
 
 .contenedor-flex .caja {
@@ -121,20 +113,15 @@ ul li {
     color: var(--blanco);
     padding: 20px;
     border-radius: 10px;
-    flex: 1 1 200px; /* Crece y encoge según espacio */
+    flex: 1 1 150px;               
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.contenedor-flex .caja:hover {
-    transform: translateY(-5px);
-    background-color: var(--azul-oscuro);
 }
 
 /* Caja destacada */
 .contenedor-flex .destacado {
-    flex-grow: 2; /* Ocupa más espacio */
+    flex-grow: 2;                  
+    background-color: var(--azul-oscuro);
 }
 
 /* Footer */
@@ -146,8 +133,12 @@ footer {
     margin-top: 40px;
 }
 
-/* Media queries para responsividad */
-@media (max-width: 768px) {
+/* =======================
+   Media Queries Responsivos
+   ======================= */
+
+/* Móviles (max-width 600px) */
+@media (max-width: 600px) {
     header h1 {
         font-size: 2rem;
     }
@@ -159,10 +150,26 @@ footer {
 
     .contenedor-flex {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
     .contenedor-flex .caja {
         flex: 1 1 100%;
+    }
+}
+
+/* Tablets (max-width 900px) */
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .contenedor-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contenedor-flex .caja {
+        flex: 1 1 45%;
     }
 }
