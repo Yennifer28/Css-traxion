@@ -1,4 +1,4 @@
-/* Paleta de colores azules */
+/* Variables de colores */
 :root {
     --azul-claro: #e0f2ff;
     --azul-medio: #4a90e2;
@@ -7,68 +7,105 @@
     --blanco: #ffffff;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--azul-claro);
+/* Estilos generales */
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background: linear-gradient(to bottom, var(--azul-claro), white);
     color: var(--texto-principal);
+    line-height: 1.6;
 }
 
-header {
+
+/* Header */
+
+header{
     background-color: var(--azul-medio);
-    color: var(--blanco);
-    text-align: center;
-    padding: 40px 20px;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+header h1{
+    font-size:40px;
+    margin:0;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
+header p{
+    font-size:18px;
 }
 
-main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+
+/* Navegación */
+
+nav{
+    margin-top:15px;
 }
 
-section {
-    background-color: var(--blanco);
-    padding: 20px 30px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-section h2 {
-    color: var(--azul-oscuro);
+nav a:hover{
+    text-decoration:underline;
 }
 
-ul {
-    margin-top: 10px;
-    padding-left: 20px;
+
+/* Contenedor principal */
+
+main{
+    max-width:900px;
+    margin:40px auto;
+    padding:0 20px;
 }
 
-ul li {
-    margin-bottom: 8px;
+
+/* Tarjetas de secciones */
+
+section{
+    background-color:white;
+    padding:25px;
+    margin-bottom:25px;
+
+    border-radius:12px;
+    border-left:6px solid var(--azul-medio);
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+    transition:all 0.3s ease;
 }
 
-footer {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+section:hover{
+    transform:translateY(-6px);
 }
 
-/* Efecto al pasar el ratón sobre secciones */
-section:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
+section h2{
+    color:var(--azul-oscuro);
+}
+
+
+/* Listas */
+
+ul{
+    padding-left:20px;
+}
+
+ul li{
+    margin-bottom:10px;
+}
+
+
+/* Footer */
+
+footer{
+    background-color:var(--azul-oscuro);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
 }
